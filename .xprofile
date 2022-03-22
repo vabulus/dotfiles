@@ -1,0 +1,8 @@
+xrandr --newmode "2560x1440_165.00_rb"  679.10  2560 2568 2600 2640  1440 1545 1553 1559 +hsync -vsync
+
+xrandr --addmode DisplayPort-0 2560x1440_165.00_rb
+xrandr --addmode DisplayPort-1 2560x1440_165.00_rb
+
+xrandr --output DisplayPort-1 --mode 2560x1440_165.00_rb --right-of DisplayPort-0
+xrandr --output DisplayPort-0 --mode 2560x1440_165.00_rb --primary
+
