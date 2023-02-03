@@ -112,15 +112,19 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias b10="sh ~/Documents/Scripts/monitor10.sh"
-alias b20="sh ~/Documents/Scripts/monitor20.sh"
-alias b50="sh ~/Documents/Scripts/monitor50.sh"
+alias b10="sh /home/fabio/Documents/3\ Privat/05\ Scripts/monitor10.sh"
+alias b20="sh /home/fabio/Documents/3\ Privat/05\ Scripts/monitor20.sh"
+alias b30="sh /home/fabio/Documents/3\ Privat/05\ Scripts/monitor20.sh"
+alias b50="sh /home/fabio/Documents/3\ Privat/05\ Scripts/monitor50.sh"
 alias n="nnn"
 alias phone="scrcpy -m 1920"
-alias newdns="sh ~/Documents/Scripts/cloudflare/createdns.sh"
+alias newdns="sh /home/fabio/Documents/3\ Privat/3\ Programmierung/Projekte/Scripts/cloudflare/createdns.sh"
 alias newalias="nano ~/.zshrc"
-
-
+alias tidal-dl="python3 /home/fabio/.local/bin/tidal-dl"
+alias vpn="sh /home/fabio/Documents/3\ Privat/05\ Scripts/schoolvpn.sh"
+alias scripts="cd /home/fabio/Documents/3\ Privat/05\ Scripts/"
+alias nano="vim xdg-open && ~/Downloads/Cheatsheets/vi_vim_cheat_sheet.pdf"
+#alias vi="xdg-open ~/Downloads/Cheatsheets/vi_vim_cheat_sheet.pdf && vI"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
