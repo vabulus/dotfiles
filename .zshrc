@@ -126,7 +126,7 @@ alias scripts="cd /home/fabio/Documents/Tech/Scripts/Bash/"
 alias nano="vim"
 alias elba="source /home/fabio/Documents/Programming/elba-to-budget/venv/bin/activate && python3 /home/fabio/Documents/Programming/elba-to-budget/elba2budget.py"
 bindkey '^H' backward-kill-word
-alias g="python3 -m sgpt $1"
+alias g="python3 -m sgpt"
 
 
 
