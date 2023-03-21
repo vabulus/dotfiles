@@ -10,7 +10,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/fabio/.oh-my-zsh"
-
+export OPENAI_API_KEY=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
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -74,6 +74,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -112,19 +115,38 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias b10="sh /home/fabio/Documents/3\ Privat/05\ Scripts/monitor10.sh"
-alias b20="sh /home/fabio/Documents/3\ Privat/05\ Scripts/monitor20.sh"
-alias b30="sh /home/fabio/Documents/3\ Privat/05\ Scripts/monitor20.sh"
-alias b50="sh /home/fabio/Documents/3\ Privat/05\ Scripts/monitor50.sh"
-alias n="nnn"
+alias b10="sh /home/fabio/Documents/Tech/Scripts/Bash/monitor10.sh"
+alias b20="sh /home/fabio/Documents/Tech/Scripts/Bash/monitor20.sh"
+alias b30="sh /home/fabio/Documents/Tech/Scripts/Bash/monitor30.sh"
+alias b50="sh /home/fabio/Documents/Tech/Scripts/Bash/monitor50.sh"
+alias n="nnn -A"
 alias phone="scrcpy -m 1920"
-alias newdns="sh /home/fabio/Documents/3\ Privat/3\ Programmierung/Projekte/Scripts/cloudflare/createdns.sh"
-alias newalias="nano ~/.zshrc"
-alias tidal-dl="python3 /home/fabio/.local/bin/tidal-dl"
-alias vpn="sh /home/fabio/Documents/3\ Privat/05\ Scripts/schoolvpn.sh"
-alias scripts="cd /home/fabio/Documents/3\ Privat/05\ Scripts/"
-alias nano="vim xdg-open && ~/Downloads/Cheatsheets/vi_vim_cheat_sheet.pdf"
-#alias vi="xdg-open ~/Downloads/Cheatsheets/vi_vim_cheat_sheet.pdf && vI"
+alias newdns="sh /home/fabio/Documents/Tech/Scripts/Bash/createdns.sh"
+alias vpn="sh /home/fabio/Documents/Tech/Scripts/Bash/schoolvpn.sh"
+alias scripts="cd /home/fabio/Documents/Tech/Scripts/Bash/"
+alias nano="vim"
+alias elba="source /home/fabio/Documents/Programming/elba-to-budget/venv/bin/activate && python3 /home/fabio/Documents/Programming/elba-to-budget/elba2budget.py"
+bindkey '^H' backward-kill-word
+alias g="python3 -m sgpt $1"
+
+
+
+extract-kindle-clipping(){
+cd /home/fabio/Documents/Tech/Scripts/kindle-clippings/  && ./extract-kindle-clippings.py
+}
+
+compress-pdf(){
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+	-dNOPAUSE -dQUIET -dBATCH -sOutputFile="$2" "$1"
+}
+
+lon(){
+	python -c "from yeelight import Bulb; bulb = Bulb('192.168.0.244'); bulb.turn_on()"
+}
+
+loff(){
+        python -c "from yeelight import Bulb; bulb = Bulb('192.168.0.244'); bulb.turn_off()"
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
